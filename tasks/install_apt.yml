@@ -1,0 +1,7 @@
+---
+- name: Install Filebeat
+  become: true
+  apt:
+    deb: "/tmp/filebeat-{{ fb_version }}-amd64.deb"
+    state: present
+  notify: restart filebeat

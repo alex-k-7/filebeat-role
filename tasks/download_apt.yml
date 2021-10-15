@@ -1,0 +1,7 @@
+---
+- name: Download filebeat's deb"
+  get_url:
+    url: "https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-{{ fb_version }}-amd64.deb"
+    dest: "/tmp/filebeat-{{ fb_version }}-amd64.deb"
+  register: download_fb
+  until: download_fb is succeeded
