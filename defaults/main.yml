@@ -1,2 +1,2 @@
 ---
-fb_version: "{{ elk_stack_version }}"
+fb_version: "7.15.0"
